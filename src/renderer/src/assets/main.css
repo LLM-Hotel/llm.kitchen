@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  background: rgba(255, 255, 255, 3%);
+  border: rgba(255, 255, 255, 10%) 1px solid;
+  border-radius: 8px;
+}
+
+* {
+  font-family: Inter, sans-serif;
+}
+
+.main-body {
+  width: 100%;
+  height: 450px;
+  background: black;
+  color: white;
+}
+
+.center-body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
