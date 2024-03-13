@@ -28,4 +28,8 @@ async function deleteModel(name) {
   return await ollama.delete({ model: name })
 }
 
+async function sendMessage(message) {
+  console.log(message);
+}
+
 export {getAllModels, deleteModel, getModelVariants}

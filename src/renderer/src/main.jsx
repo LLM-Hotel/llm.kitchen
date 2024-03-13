@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import MenuPage from "./pages/MenuPage";
 import ModelsDir from "./pages/ModelsDir";
+import ChatPage from "./pages/ChatPage";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
   {
     path: "/models",
     element: <ModelsDir />
+  },
+  {
+    path: '/chat',
+    element: <ChatPage />,
   }
 ]);
 

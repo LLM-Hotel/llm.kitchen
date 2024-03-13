@@ -1,0 +1,37 @@
+* {
+  font-size: 18px;
+}
+
+.chat-container {
+  padding: 25px 25px 25pt;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.input-container {
+  outline: 0;
+}
+
+.send-button {
+  transition-property: background-color;
+  transition-duration: 0.25s;
+
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.send-button:hover {
+  background-color: #0e0e0e;
+}
+
+.send-button:active {
+  background-color: #353535;
+}
+
+.vl {
+  border-left: 2px solid #ffffff;
+  padding-left: 20px;
+  margin-left: 5px;
+}
