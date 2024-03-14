@@ -1,34 +1,24 @@
-# -llm-kitchen
+![image](static/logo.png)
 
-An Electron application with React
+## Introducing LLM Kitchen
+The all-in-one app for Large Language Models (LLMs) enthusiasts. From inference to fine-tuning, synthetic dataset generation to model quantization, LLM Kitchen offers a seamless experience for exploring and utilizing LLM capabilities.
 
-## Recommended IDE Setup
+## Installation
+Start by cloning the repository:
 
-- [VSCode](https://code.visualstudio.com/) + [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) + [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+````bash
+git clone https://github.com/LLM-Hotel/llm.kitchen
+cd llm.kitchen
+````
 
-## Project Setup
-
-### Install
+After cloning the repository, install all the dependencies:
 
 ```bash
-$ npm install
+npm i
 ```
 
-### Development
+## Running the app
 
 ```bash
-$ npm run dev
-```
-
-### Build
-
-```bash
-# For windows
-$ npm run build:win
-
-# For macOS
-$ npm run build:mac
-
-# For Linux
-$ npm run build:linux
+npm run dev
 ```
