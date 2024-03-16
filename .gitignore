@@ -11,3 +11,4 @@ out
 /.prettierignore
 /test.mjs
 /.idea
+/data
