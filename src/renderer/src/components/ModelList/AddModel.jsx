@@ -12,7 +12,7 @@ import {
 } from "@nextui-org/react";
 import '../../assets/modelsHub.css'
 import DownloadButton from "./DownloadButton";
-import { getModelVariants } from "../../ai_src/modelManager";
+import { downloadModel } from "../../ai_src/modelManager";
 
 function AddModel() {
   const {isOpen, onOpen, onOpenChange} = useDisclosure();
@@ -31,35 +31,27 @@ function AddModel() {
         <ModalContent>
           {(onClose) => (
             <>
-              <ModalHeader className="flex flex-col gap-1">Log in</ModalHeader>
+              <ModalHeader className="flex flex-col gap-1">Pull model</ModalHeader>
               <ModalBody>
                 <Input
                   onValueChange={async (value) => {
                     setModelName(value);
-                    setModelVariants(await getModelVariants(value));
                   }}
                   autoFocus
                   label="Model Name"
                   placeholder="Find available models from: https://ollama.com/library"
                   variant="bordered"
                 />
-                <Autocomplete
-                  label="Select an animal"
-                  className="max-w-xs"
-                >
-                  {modelVariants.map((variant) => (
-                    <AutocompleteItem key={variant} value={variant}>
-                      {variant}
-                    </AutocompleteItem>
-                  ))}
-                </Autocomplete>
               </ModalBody>
               <ModalFooter>
                 <Button color="danger" variant="flat" onPress={onClose}>
-                  Close
+                  Cancel
                 </Button>
-                <Button color="primary" onPress={onClose}>
-                  Sign in
+                <Button color="primary" onPress={async () => {
+                  onClose()
+                  console.log(downloadModel(modelName))
+                }}>
+                  Download
                 </Button>
               </ModalFooter>
             </>
