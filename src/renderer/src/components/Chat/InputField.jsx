@@ -1,17 +1,20 @@
 import '../../assets/chat.css'
 import { useRef } from "react";
+import { sendMessage } from "../../ai_src/modelManager";
 
 function InputField({ history, setHistory }) {
   const divRef = useRef(null);
 
-  const handleClick = () => {
+  const handleClick = async () => {
     const divContents = divRef.current.innerHTML;
-    setHistory(history.concat([
+    const updatedHistory = history.concat([
       {
         role: 'user',
-        message: divContents
+        content: divContents
       }
-    ]))
+    ])
+    setHistory(updatedHistory)
+    sendMessage(divContents, updatedHistory, setHistory);
   };
 
   return (

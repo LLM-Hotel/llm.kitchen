@@ -49,7 +49,7 @@ function ChatHistory({ history, setHistory }) {
                     setEdit(false);
                   }
                 }}>
-                  {item.message}
+                  {item.content}
                 </div>
               </div>
             </div>

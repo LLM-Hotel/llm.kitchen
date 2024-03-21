@@ -12,7 +12,7 @@ function ChatPage() {
         <div style={{
           height: '100%',
           width: '100%'
-        }}>
+        }} className='overflow-y-auto'>
           <ChatHistory history={chatHistory} setHistory={setChatHistory}/>
         </div>
         <InputField history={chatHistory} setHistory={setChatHistory}/>
